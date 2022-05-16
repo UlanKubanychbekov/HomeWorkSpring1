@@ -6,15 +6,22 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-<context:property-placeholder location="app.properties"/>
-<bean id="Animal"
-      class="peaksoft.Wolf">
+    <context:property-placeholder location="app.properties"/>
+    <bean id="Animal"
+          class="peaksoft.Wolf">
 
-</bean>
+    </bean>
     <bean id="person"
           class="peaksoft.Person">
         <property name="animal" ref="Animal"/>
         <property name="name" value="${person.name}"/>
         <property name="age" value="${person.age}"/>
+    </bean>
+    <bean id="pers1"
+          class="peaksoft.Person">
+        <property name="animal" ref="Animal"/>
+        <property name="name" value="${person1.name}"/>
+        <property name="age" value="${person1.age}"/>
+
     </bean>
 </beans>

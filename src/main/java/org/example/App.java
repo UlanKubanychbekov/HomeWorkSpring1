@@ -19,9 +19,14 @@ public class App {
 //        animal.animalPlus();
         Person person = context.getBean
                 ("person", Person.class);
-        person.animalDog();
         System.out.println("name: " + person.getName() + ", " + "age: " + person.getAge());
+        person.animalDog();
+        System.out.println();
 
+        Person person1 = context.getBean("pers1", Person.class);
+        System.out.println("name: " + person1.getName() + ", " + "age: " + person1.getAge());
+        person1.getAnimal().animalPlus();
+        person1.getAnimal().animalMinus();
 
 
     }
